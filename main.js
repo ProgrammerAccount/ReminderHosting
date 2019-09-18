@@ -668,11 +668,11 @@ var AuthService = /** @class */ (function () {
         this.http = http;
     }
     AuthService.prototype.canActivate = function (route, state) {
-        if (localStorage.getItem('token')) {
-            return true;
-        }
-        window.location.href = 'login';
-        return false;
+        //if (localStorage.getItem('token')) {
+        return true;
+        //}
+        //window.location.href = 'login';
+        //return false;
     };
     AuthService.prototype.login = function (email, password) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json; charset=utf-8');
